@@ -1,5 +1,7 @@
 # AlphaRoute
 
+> Copy of the original repository **[Kcbir/AlphaRoute](https://github.com/Kcbir/AlphaRoute)** (maintained by Kabir Murjani), with full commit history. Paper: [arXiv:2607.19768](https://arxiv.org/abs/2607.19768), IEEE ICLAD 2026.
+
 A global router for VLSI physical design that lets a language model tune the routing penalties instead of hand-coding a fixed schedule.
 
 Global routing decides how every signal net gets a path across a chip's grid of routing cells. The hard part is congestion: too many nets fighting for the same cells. Most routers deal with this using penalty schedules that are fixed up front, but the penalty that actually works depends on what the congestion looks like at each step. AlphaRoute keeps that decision open. It measures the overflow after each pass, asks an LLM what to do about it, and applies the answer only if a knowledge graph says it's within bounds. The LLM never touches wires directly, so the routing stays deterministic and reproducible.
@@ -117,6 +119,15 @@ alpharoute/          The two-tier pipeline
   pipeline.py        Ties the micro and macro loops together
 run_experiments.sh   Runs the ARIANE ablations
 ```
+
+## Authors
+
+- Kabir Murjani
+- Mishri Bhavsar
+- Manish I. Patel
+- Jonti Talukdar
+
+*AlphaRoute: Large Language Models as Semantic Optimizers for Multi-Objective Routing*, 2026 IEEE International Conference on LLM-Aided Design (ICLAD), Stanford University.
 
 ## Citing
 
